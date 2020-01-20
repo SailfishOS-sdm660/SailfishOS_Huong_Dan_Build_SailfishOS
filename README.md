@@ -27,7 +27,7 @@ Bạn Cần add Những Thứ Này Vào ~/.bashrc
 Tiếp Theo Bạn Cần Tạo File .hadk.env ở ~/ và dán nội dung này vào :
 ```bash
    
-   export PLATFORM_SDK_ROOT="/srv)mer"
+   export PLATFORM_SDK_ROOT="/srv/mer"
    export ANDROID_ROOT="$HOME/Sailfish/src"
    export VENDOR="xiaomi"
    export DEVICE="whyred"
