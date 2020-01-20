@@ -314,7 +314,17 @@ Bạn Có Thể Xoá File Cũ Để Nhẹ Bớt Ổ Cứng :
 ```bash
    cd && rm Jolla-latest-SailfishOS_Platform_SDK_Chroot-i486.tar.bz2 ubuntu-*-android-rootfs.tar.bz2
 ```
-
+## Bước 5
+Bắt Đầu Sync :
+```bash
+   repo init -u https://github.com/SailfishOS-sdm660/SailfishOS_manifest.git -b android-8.1
+```
+```bash
+   repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+```
+## Hướng Dẫn Chuyển Đổi User
+Ví Dụ Bạn Đang Ở habuild để Chuyển Đổi Về platform_sdk Bạn Nhập exit
+để sang habuild bạn nhập habuild 
 
 
 
