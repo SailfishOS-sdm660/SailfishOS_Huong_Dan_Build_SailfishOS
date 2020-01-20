@@ -325,6 +325,27 @@ Bắt Đầu Sync :
 ## Hướng Dẫn Chuyển Đổi User
 Ví Dụ Bạn Đang Ở habuild để Chuyển Đổi Về platform_sdk Bạn Nhập exit
 để sang habuild bạn nhập habuild 
+## Bước 6
+Build Hal : / user habuild
+```bash
+   source build/envsetup.sh && breakfast $DEVICE && export USE_CCACHE=1
+```
+```bash
+   mka hybris-hal
+```
+Nếu Đây Là Lần Đầu Bạn Build Với Source Này . Bạn Cần Thứ Này Đấy ☺️☺️😚
+```bash
+   echo "MINIMEDIA_AUDIOPOLICYSERVICE_ENABLE := 1" > external/droidmedia/env.mk
+   mka droidmedia audioflingerglue
+```
+Tiếp Theo Là Build Hybris Boot ( Kernel )
+```bash
+   mka hybris-boot
+```
+Build SailfishOS Và rootfs Của SailfishOS : (P/S Build Lỗi Nhiều Kinh 😂😂😂)
+```bash
+   build_all_packages
+```
 
 
 
