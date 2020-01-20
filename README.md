@@ -278,6 +278,22 @@ Cài Đặt Tool HADK :
 ```bash
    Nếu Bị Lỗi Này adaptation0 Thì Đó Là Chuyện Bình Thường / Không Bị Cũng Không Sao Cả  😅😅😅
 ```
+## Bước 3
+Thêm Mục Tiêu Để Build SailfishOS 
+```bash
+   cd && sdk-manage target install $VENDOR-$DEVICE-$PORT_ARCH http://releases.sailfishos.org/sdk/targets/Sailfish_OS-$RELEASE-Sailfish_SDK_Target-$PORT_ARCH.tar.7z --tooling SailfishOS-$RELEASE --tooling-url http://releases.sailfishos.org/sdk/targets/Sailfish_OS-$RELEASE-Sailfish_SDK_Tooling-i486.tar.7z
+```
+Để Kiểm Tra Xem Đã Ổn Chưa :
+```bash
+   sdk-assistant list
+```
+Kết quả Là :
+```bash
+   SailfishOS-3.2.1.20
+   |-xiaomi-whyred-armv7hl
+```
+Là Ổn Rồi Đấy 
+
 
 
 
