@@ -238,3 +238,49 @@ if [ -f build/envsetup.sh ]; then
 	export USE_CCACHE=1
 fi
 ```
+## Bước 2 
+Bạn Tạo curl Bin Google
+```bash
+   mkdir ~/bin
+   curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+   chmod +x ~/bin/repo
+```
+Tiếp Theo Là Tạo Môi Trường SDK Nền Tản SUSE Linux :
+```bash
+   exec bash
+   sudo mkdir -p $PLATFORM_SDK_ROOT/{targets,toolings,sdks/sfossdk}
+   sudo ln -s /srv/mer/sdks/sfossdk/srv/mer/sdks/ubuntu/ /srv/mer/sdks/ubuntu
+   cd && curl -k -O http://releases.sailfishos.org/sdk/installers/latest/Jolla-latest-SailfishOS_Platform_SDK_Chroot-i486.tar.bz2
+   sudo tar --numeric-owner -p -xjf Jolla-latest-SailfishOS_Platform_SDK_Chroot-i486.tar.bz2 -C $PLATFORM_SDK_ROOT/sdks/sfossdk            
+   mkdir -p $ANDROID_ROOT
+   sfossdk
+```
+Tiếp Theo Là Chọn Thiết Bị :
+```bash
+Which hybris-15.1 device would you like to build for?
+
+  1. whyred (Xiaomi Redmi Note 5 Pro)
+  2. dumpling     (OnePlus 5T)
+  
+  Choice: (1/2) 1
+Cloning droid HAL & configs for whyred... done!
+
+Env setup for whyred
+```
+
+
+Cài Đặt Tool HADK :
+```bash
+   sudo zypper ref -f
+   sudo zypper --non-interactive in bc pigz atruncate android-tools-hadk
+```
+
+```bash
+   Nếu Bị Lỗi Này adaptation0 Thì Đó Là Chuyện Bình Thường / Không Bị Cũng Không Sao Cả  😅😅😅
+```
+
+
+
+
+
+
