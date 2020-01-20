@@ -293,6 +293,27 @@ Kết quả Là :
    |-xiaomi-whyred-armv7hl
 ```
 Là Ổn Rồi Đấy 
+## Bước 4
+Cài Đặt SDK HABUILD :
+```bash
+   TARBALL=ubuntu-trusty-20180613-android-rootfs.tar.bz2
+   cd && curl -O https://releases.sailfishos.org/ubu/$TARBALL
+   UBUNTU_CHROOT=$PLATFORM_SDK_ROOT/sdks/ubuntu
+   sudo mkdir -p $UBUNTU_CHROOT
+   sudo tar --numeric-owner -xjf $TARBALL -C $UBUNTU_CHROOT
+   sudo sed "s/\tlocalhost/\t$(</parentroot/etc/hostname)/g" -i $UBUNTU_CHROOT/etc/hosts
+   cd $ANDROID_ROOT
+   habuild
+```
+Thiết Lập Thêm Môi Trường Git :
+```bash
+   git config --global user.name "Your Name"
+   git config --global user.email "your@email.com"
+```
+Bạn Có Thể Xoá File Cũ Để Nhẹ Bớt Ổ Cứng :
+```bash
+   cd && rm Jolla-latest-SailfishOS_Platform_SDK_Chroot-i486.tar.bz2 ubuntu-*-android-rootfs.tar.bz2
+```
 
 
 
