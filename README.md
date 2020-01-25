@@ -348,8 +348,12 @@ Tiếp Theo Là Build Hybris Boot ( Kernel )
 ```
 Build SailfishOS Và rootfs Của SailfishOS : (P/S Build Lỗi Nhiều Kinh 😂😂😂)
 ```bash
-   build_all_packages
+   build_packages
 ```
+
+## Info :
+Nếu Có Bất Kỳ Lỗi Nào : 
+[nobi nobita](https://t.me/polanobi)
 
 
 
